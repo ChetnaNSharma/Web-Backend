@@ -7,7 +7,13 @@
     <title>Comment Index</title>
 </head>
 <body>
-    <h1><%=call[1].id%></h1>
+    <h1> comments</h1>
+
+    <% for(let c of comments){ %>
+        <ul>
+            <li><%=c.comment%> - <%= c.username%></li>
+        </ul>
+    <%}%>
 
     
     
