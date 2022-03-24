@@ -19,5 +19,11 @@ const productSchema = new mongoose.Schema({
 })
 
 const Product = mongoose.model('Product','productSchema')
-const bike = new Product({name: 'Mountain Bike', price: 599})
-bike.save();
+const bike = new Product({name: 'Mountain Bike', price: 599, color: 'red'})
+bike.save()
+.then( data => {
+    console.log(data);
+})
+.catch(err => {
+    console.log(err);
+})
